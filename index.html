@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pinch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Figtree:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>Pinch</h1>
+    <p>Seven dinners, decided for you. Built around what you already have, what's on sale nearby, your budget and how long you want to stand in the kitchen.</p>
+  </header>
+
+  <section class="profile" id="profile" hidden></section>
+
+  <section class="ctrl" aria-label="Plan settings">
+    <div><label class="t">Who's eating</label><div class="seg" id="sizeSeg"></div><p class="sub" id="sizeSub"></p></div>
+    <div><label class="t">Weekly dinner budget</label><div class="seg" id="budgetSeg"></div><p class="sub" id="budgetSub"></p></div>
+    <div><label class="t">Max cooking time (weeknights)</label><div class="seg" id="timeSeg"></div><p class="sub">Weekends get 20 minutes more.</p></div>
+    <div><label class="t">Cooking style</label><div class="seg" id="styleSeg"></div><p class="sub" id="styleSub"></p></div>
+  </section>
+
+  <section class="stats" id="stats" aria-label="Plan summary"></section>
+
+  <section>
+    <div class="sec-h"><h2>This week's dinners</h2><p>Swap any night. Prices and calories are per household / per person.</p></div>
+    <div class="week" id="week"></div>
+  </section>
+
+  <section id="savings" aria-label="Savings and investing">
+    <div class="sec-h"><h2>What planning saves you</h2><p>Compared with a week without a plan. Change the assumptions to match your home.</p></div>
+    <div class="sv-grid">
+      <div class="panel" id="svLeft"></div>
+      <div class="panel" id="svRight"></div>
+    </div>
+  </section>
+
+  <section class="cols">
+    <div class="col">
+      <div class="panel">
+        <h2>What's in your kitchen</h2>
+        <p class="s">The planner uses things that expire soonest first. Tap the bell to get a reminder the evening before.</p>
+        <ul id="pantry"></ul>
+        <form class="add" id="addForm">
+          <input type="text" id="addName" list="ingList" placeholder="Add an item, e.g. milk" aria-label="Item name" required>
+          <input type="number" id="addDays" min="1" max="365" value="5" aria-label="Days until it expires" required>
+          <button class="btn primary" type="submit">Add</button>
+        </form>
+        <datalist id="ingList"></datalist>
+      </div>
+      <div class="panel">
+        <h2>Reminders</h2>
+        <p class="s">Shown here while this page is open. Phone alerts need the real app.</p>
+        <ul id="reminders"></ul>
+      </div>
+      <div class="panel">
+        <h2>Tips for this plan</h2>
+        <div id="tips"></div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="panel">
+        <h2>Deals near you</h2>
+        <p class="s">Sample prices from <b id="dealSub">your stores</b>. Meals using these get a lower price.</p>
+        <ul id="deals"></ul>
+        <p class="note" style="margin-top:12px">These are example prices. A live version needs a flyer or store-deals source for your area.</p>
+      </div>
+      <div class="panel shop">
+        <h2>Shopping list</h2>
+        <p class="s" id="shopSub"></p>
+        <div id="shop"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
