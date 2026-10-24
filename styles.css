@@ -158,3 +158,5 @@ header.top p{color:var(--muted);margin-top:2px;max-width:60ch}
 #savings .chip{min-height:34px;padding:4px 12px;font-size:13px}
 #savings .chips{margin:6px 0 2px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.v1-note{background:var(--accent-soft);color:var(--fg);border-radius:10px;padding:8px 12px;margin:16px 0 12px;font-size:13px}
+.v1-note a{color:var(--accent);font-weight:600}
