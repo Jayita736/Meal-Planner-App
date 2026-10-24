@@ -1,4 +1,7 @@
-# Pinch: a weekly dinner planner
+# Pinch: a weekly dinner planner (v1 prototype)
+
+> [!IMPORTANT]
+> **This is the first prototype of Pinch and is no longer developed.** The current app, with accounts and a database, lives in [Jayita736/delicious-dinner-dash](https://github.com/Jayita736/delicious-dinner-dash) (synced with Lovable). Try it at https://delicious-dinner-dash.lovable.app.
 
 **Seven dinners, decided for you.** Pinch builds a week of dinners around what's already in your kitchen, what's on sale nearby, your budget, and how long you want to spend cooking.
 

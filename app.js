@@ -372,7 +372,7 @@
   function drawOb(){
     var d=ob.d,s=ob.step,h='';
     if(s===0){
-      h='<h2>What should we call you?</h2><p class="obs">Just a first name.</p><input type="text" data-f="name" value="'+esc(d.name)+'" maxlength="30" placeholder="First name" aria-label="First name">'+
+      h='<p class="v1-note">This is the first Pinch prototype. <a href="https://delicious-dinner-dash.lovable.app">Try the current app</a>.</p><h2>What should we call you?</h2><p class="obs">Just a first name.</p><input type="text" data-f="name" value="'+esc(d.name)+'" maxlength="30" placeholder="First name" aria-label="First name">'+
         '<h3>Who is eating dinner?</h3><div class="chips">'+SIZES.map(function(z){return chip('data-set="size" data-v="'+z.id+'"',z.l,d.size===z.id)}).join('')+'</div>'+
         '<h3>Any kids under 12?</h3><div class="chips">'+[0,1,2,3,4].map(function(k){return chip('data-set="kids" data-v="'+k+'"',k===0?'None':String(k),d.kids===k)}).join('')+'</div>'+
         (d.kids>0?'<p class="obs">Kids eat less than the per-person calories shown. Treat those numbers as an adult figure.</p>':'');
